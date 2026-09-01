@@ -1,0 +1,504 @@
+/* ================================
+   CineMind - AI Generation Page
+================================ */
+
+.generation-page {
+  min-height: calc(100vh - 70px);
+  padding: 60px 7%;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(105, 76, 255, 0.18),
+      transparent 35%
+    ),
+    #05051f;
+}
+
+/* ---------- Header ---------- */
+
+.generation-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 42px;
+}
+
+.generation-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.55);
+}
+
+.generation-icon i {
+  font-size: 24px;
+}
+
+.generation-eyebrow {
+  margin-bottom: 40px;
+
+  color: #a78bfa;
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.generation-header h1 {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #ffffff, #c4b5fd, #93c5fd);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.generation-header p:last-child {
+  margin-top: 15px;
+
+  color: #aaa9c5;
+  font-size: 16px;
+}
+
+/* ---------- Master Agent ---------- */
+
+.master-agent-card {
+  max-width: 900px;
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 24px 28px;
+
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 20px;
+
+  background: rgba(20, 18, 55, 0.75);
+
+  box-shadow:
+    0 0 35px rgba(99, 102, 241, 0.12),
+    inset 0 0 25px rgba(139, 92, 246, 0.04);
+}
+
+.master-agent-icon {
+  min-width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+}
+
+.master-agent-icon i {
+  font-size: 25px;
+}
+
+.master-agent-card > div:nth-child(2) {
+  flex: 1;
+}
+
+.master-agent-card span:first-child {
+  color: #a78bfa;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.master-agent-card h2 {
+  margin: 5px 0;
+
+  font-size: 23px;
+}
+
+.master-agent-card p {
+  margin: 0;
+
+  color: #aaa9c5;
+  font-size: 14px;
+}
+
+.master-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #67f7b2;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.master-status span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: #4ade80;
+
+  box-shadow: 0 0 10px #4ade80;
+}
+
+/* ---------- Agents ---------- */
+
+.agents-progress {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.generation-agent {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  padding: 18px 20px;
+
+  border: 1px solid rgba(100, 100, 160, 0.25);
+  border-radius: 16px;
+
+  background: rgba(13, 13, 42, 0.75);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.generation-agent.working {
+  border-color: rgba(139, 92, 246, 0.7);
+
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.16);
+
+  transform: translateX(4px);
+}
+
+.generation-agent.completed {
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.agent-number {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  color: #aaa9c5;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.generation-agent.completed .agent-number {
+  color: #ffffff;
+  background: #22c55e;
+
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+}
+
+.generation-agent.working .agent-number {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.5);
+}
+
+.generation-agent-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: rgba(99, 102, 241, 0.13);
+
+  color: #a78bfa;
+}
+
+.generation-agent.working .generation-agent-icon {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+}
+
+.generation-agent.completed .generation-agent-icon {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.generation-agent-info {
+  flex: 1;
+}
+
+.generation-agent-info h3 {
+  margin: 0 0 4px;
+
+  font-size: 16px;
+}
+
+.generation-agent-info p {
+  margin: 0;
+
+  color: #8584a5;
+
+  font-size: 13px;
+}
+
+.generation-agent-status {
+  min-width: 85px;
+
+  text-align: right;
+
+  color: #696987;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.generation-agent.working .generation-agent-status {
+  color: #a78bfa;
+}
+
+.generation-agent.completed .generation-agent-status {
+  color: #4ade80;
+}
+
+/* ---------- Progress ---------- */
+
+.generation-progress {
+  max-width: 900px;
+  margin: 35px auto 0;
+
+  padding: 22px 25px;
+
+  border-radius: 18px;
+
+  background: rgba(18, 17, 50, 0.75);
+  border: 1px solid rgba(100, 100, 160, 0.22);
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  color: #aaa9c5;
+  font-size: 13px;
+}
+
+.progress-text strong {
+  color: #c4b5fd;
+  font-size: 15px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 9px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #a855f7, #6366f1, #3b82f6);
+
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.55);
+
+  transition: width 0.6s ease;
+}
+
+/* ---------- Final Button ---------- */
+
+.open-project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin: 35px auto 0;
+
+  padding: 15px 30px;
+
+  border: none;
+  border-radius: 14px;
+
+  color: white;
+
+  background: linear-gradient(90deg, #a855f7, #6366f1, #3b82f6);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.35);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.open-project-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 35px rgba(99, 102, 241, 0.55);
+}
+
+.open-project-btn i {
+  transition: transform 0.25s ease;
+}
+
+.open-project-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+  .generation-page {
+    padding: 40px 20px;
+  }
+
+  .master-agent-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .master-status {
+    width: 100%;
+    margin-left: 82px;
+  }
+
+  .generation-agent {
+    padding: 15px;
+  }
+
+  .generation-agent-status {
+    min-width: auto;
+  }
+
+  .generation-agent-info p {
+    display: none;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .generation-agent,
+  .open-project-btn,
+  .open-project-btn i,
+  .progress-fill {
+    transition: none;
+  }
+}
+
+/* =================================================
+   RESEARCH AGENT
+================================================= */
+
+.generation-agent:has(.fa-magnifying-glass-chart) {
+  position: relative;
+}
+
+/* Research agent icon */
+
+.generation-agent:has(.fa-magnifying-glass-chart) .generation-agent-icon {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+}
+
+/* Research agent when working */
+
+.generation-agent.working:has(.fa-magnifying-glass-chart) {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.12),
+    inset 0 0 25px rgba(59, 130, 246, 0.03);
+}
+
+/* Research agent when completed */
+
+.generation-agent.completed:has(.fa-magnifying-glass-chart)
+  .generation-agent-icon {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+/* Research label */
+
+.generation-agent:has(.fa-magnifying-glass-chart)
+  .generation-agent-info::after {
+  content: "POWERED BY PARALLEL";
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #60a5fa;
+  opacity: 0.8;
+}
+
+.gen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap");
+
+.gen-para1 {
+  color: #ede4f1;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
