@@ -617,8 +617,7 @@ https://cine-mind-kohl.vercel.app
 
 # 📸 Screenshots
 
-<img width="1899" height="913" alt="main" src="https://github.com/user-attachments/assets/e63c0651-314c-4374-8069-a0b1102a6534" /><img width="1899" height="910" alt="blueprint" src="https://github.com/user-attachments/assets/a95a008c-3a29-47de-bc75-daf11e1076bc" />
-
+<img width="1899" height="913" alt="main" src="https://github.com/user-attachments/assets/e63c0651-314c-4374-8069-a0b1102a6534" />
 
 ### 🏠 Landing Page
 
@@ -626,8 +625,7 @@ https://cine-mind-kohl.vercel.app
 
 ### 🎬 Project Creation
 
-<img width="1894" height="906" alt="creationpage" src="https://github.com/user-attachments/assets/fd60e6c2-38f0-4226-a316-5370801ddb13" /><img width="1900" height="908" alt="AIgeneration" src="https://github.com/user-attachments/assets/624e2cbc-3029-42fe-89f7-a0f53cd0afae" />
-
+<img width="1894" height="906" alt="creationpage" src="https://github.com/user-attachments/assets/fd60e6c2-38f0-4226-a316-5370801ddb13" />
 
 ### 🧠 AI Generation
 
